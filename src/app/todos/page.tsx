@@ -77,7 +77,14 @@ const page = () => {
         {/* isDone이 false인 목록 노출 */}
         <h1>Working</h1>
         <div>
-          {todos.length > 0 ? <div></div> : <p>작성된 투두가 없습니다!</p>}
+          {todos.length > 0 ? (
+            <div>
+              <p>{title}</p>
+              <p>{content}</p>
+            </div>
+          ) : (
+            <p>작성된 투두가 없습니다!</p>
+          )}
         </div>
       </div>
     </div>
